@@ -1,8 +1,11 @@
 #include <stdio.h>
 
 void double_elements(int *arr, int length){
+    int *ptr = arr;
+
     for(int i=0; i<length; i++){
-        arr[i] = 2*arr[i];
+        *ptr= 2*(*ptr);
+        ptr++;
     }
 
 }
