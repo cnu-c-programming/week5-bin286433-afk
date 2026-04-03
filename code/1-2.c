@@ -1,9 +1,9 @@
 #include <stdio.h>
 
 int sum_range(int *start, int *end){
-    int sum;
-    for(int *i=start; i<end; i++){
-        sum+=(*start);
+    int sum=0;
+    while(start<end){
+        sum+= *start;
         start++;
     }
     return sum;
