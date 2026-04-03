@@ -1,17 +1,22 @@
 #include <stdio.h>
+#include <string.h>
 
 long my_strtol(char *str, char **endptr){
     long res = 0;
 
-    while(isdigit(str)){
-        char
+    while(*str >= '0' && *str<='9'){
+        res = res*10 + (*str - '0');
+        str++;
     }
+
+    *endptr = str;
+    return res;
 }
 
 
 
 int main() {
-    char str[] = "20266hello";
+    char str[] = "2026hello";
     char *end;
 
     long val = my_strtol(str, &end);
