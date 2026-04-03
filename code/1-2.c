@@ -4,7 +4,7 @@ int sum_range(int *start, int *end){
     int sum;
     for(int *i=start; i<end; i++){
         sum+=(*start);
-        *start++;
+        start++;
     }
     return sum;
 
